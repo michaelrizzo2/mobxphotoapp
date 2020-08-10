@@ -1,11 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import './css/main.css'
-import Dashboard from "./components/Dashboard";
+import storeInstance from './store/Store'
 
-ReactDOM.render(<Dashboard />, document.getElementById('app'));
+export const StoreContext = React.createContext();
 
-if (module.hot) {
-    // enables hot module replacement if plugin is installed
-    module.hot.accept();
-}
+ReactDOM.render(
+        <StoreContext.Provider value={storeInstance}>
+            <Post />
+        </StoreContext.Provider >
+    , document.getElementById('app'));
