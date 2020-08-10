@@ -4,7 +4,7 @@ import {StoreContent } from "../main"
 export default function Count()
 {
     const store=useContent(StoreContent)
-    return (
+    return useObserver(()=>(
         <div className="row reactions-count" >
             <div className="col-sm" align="left">
                 <i className="fa fa-thumbs-up" />{store.likesCount}
@@ -13,5 +13,5 @@ export default function Count()
                 3 comments
         </div>
         </div>
-    )
+    ))
 }
