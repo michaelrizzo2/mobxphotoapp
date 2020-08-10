@@ -10,6 +10,11 @@ class Store
     }
 
     @observable comments = ["Wow", "awesome"]
+
+    @action postCommment(comment)
+    {
+        this.comments.push(comment)
+    }
 }
 
 const storeInstance = new Store()
