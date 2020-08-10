@@ -8,6 +8,8 @@ class Store
     {
         this.likesCount++;
     }
+
+    @observable comments = ["Wow", "awesome"]
 }
 
 const storeInstance = new Store()
