@@ -3,7 +3,7 @@ import { StoreContext } from '../main';
 
 export default function Comments() {
     const store = useContext(StoreContext)
-    return (
+    return useObserver(()=> (
         <table className="table">
             <tbody>
                 {
@@ -20,5 +20,5 @@ export default function Comments() {
                 }
             </tbody>
         </table>
-    )
+    ))
 }
