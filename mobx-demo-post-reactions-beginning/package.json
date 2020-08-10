@@ -1,7 +1,7 @@
 {
   "name": "mobx-demo-post-reactions",
   "version": "1.0.0",
-  "description": "A simle app to showcae mobx features",
+  "description": "A simle app to showcase mobx features",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
