@@ -1,27 +1,24 @@
-import { observable,action, computed } from "mobx";
+import { observable, action, computed } from 'mobx'
 
-class Store
-{
-    @observable likesCount=12
-
-    @action updateCount()
-    {
-        this.likesCount++;
-    }
+class Store {
+    @observable likesCount = 12
 
     @observable comments = ["Wow", "awesome"]
 
-    @action postCommment(comment)
-    {
+    @action updateCount() {
+        this.likesCount++;
+    }
+
+    @action postComment(comment) {
         this.comments.push(comment)
     }
 
-    @computed getCommentsCount()
-    {
+    @computed get commentsCount(){
         return this.comments.length;
     }
+
 }
 
 const storeInstance = new Store()
-export default storeInstance;
 
+export default storeInstance;
