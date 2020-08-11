@@ -1,9 +1,9 @@
-import React,{useContent} from "react";
-import {StoreContent } from "../main"
+import React,{useContext} from "react";
+import {StoreContext } from "../main"
 
 export default function Count()
 {
-    const store=useContent(StoreContent)
+    const store=useContext(StoreContext)
     return useObserver(()=>(
         <div className="row reactions-count" >
             <div className="col-sm" align="left">
